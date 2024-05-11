@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    line-height: 24px;
+}
+
+.container {
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header {
+    background: #FFF;
+    box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 43px;
+    padding-bottom: 58px;
+
+}
+
+
+.nav-invo ul {
+    display: flex;
+    list-style-type: none;
+    gap: 51px;
+    margin-top: 2px;
+}
+
+
+.link-nav {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Montserrat Alternates;
+}
+
+.main-link:hover {
+    color: #BD7048;
+}
+
+.link-contacts {
+    color: #3B3B3B;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+}
+
+.schedule {
+    color: rgba(59, 59, 59, 0.50);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.main-block {
+    padding-top: 75px;
+    text-align: center;
+    padding-bottom: 39px;
+}
+
+.title-company-name {
+    margin-top: 0;
+    margin-bottom: 19px;
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 21px;
+    font-family: Montserrat Alternates;
+}
+
+
+.main-title {
+    font-family: Montserrat Alternates;
+    color: #060606;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 61px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main-img-block {
+    padding-top: 7px;
+}
+
+.main-img {
+    width: 100%;
+}
+
+.cards-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card {
+    border-radius: 20px;
+    background: #FFF;
+    border-radius: 15px;
+    border: 1px solid #BD7048;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.30);
+    margin-bottom: 40px;
+    width: 349px;
+}
+
+.link-img {
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+}
+
+.card-info {
+    text-align: center;
+    color: #353535;
+    font-family: Montserrat Alternates;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration-line: underline;
+    padding: 0;
+}
+
+.card-info:hover {
+    color: #BD7048;
+}
+
+.footer {
+    background: #EEE;
+    padding: 25px 0;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 0 0 0 65px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-right: 65px;
+}
+
+.footer-link {
+    font-size: 30px;
+    color: black;
+}

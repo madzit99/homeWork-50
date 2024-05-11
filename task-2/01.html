@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-2.css">
 </head>
 
 <body>
@@ -20,8 +20,8 @@
 
         const ComponentLi = ({listInfo}) => {
         return (
-            <li>
-                 <a href="#">{listInfo}</a>
+            <li className="list-info">
+                 <a className="link-nav" href="#">{listInfo}</a>
             </li>
              )
         };
@@ -29,34 +29,120 @@
         const ComponentInfo = ({myTitle, titleInfo, img}) => {
             return (
                 <div className="main-block">
-                    <h1>{myTitle}</h1>
-                    <h3>{titleInfo}</h3>
                     <img className="mai-img" src={img} alt="Compani Img"></img>
                 </div>
             );
         };
 
-        const ComponentCard = ({imgCard, cardTitle}) => {
+
+
+        const ComponentCard = ({imgCard, titleCard}) => {
             return (
-                <div className="card">
-                    <img src={imgCard} alt="cardTitle"></img>
-                    <h4>{cardTitle}</h4>
+                <div>
+                    <img className="link-img" src={imgCard} alt={titleCard}></img>
+                    <h4 className="card-info">{titleCard}</h4>
                 </div>
-            );
+            )
         };
-
-
         const ComponentLinkFooter = ({icon}) => {
             return(
                 <a href="#" className="footer-link">
-                    <i class={icon}></i>
+                    <i className={icon}></i>
                 </a>
             )
         };
 
+        const header = (
+            <div className="header">
+                <div className="header-container container">
+                    <div className="block-logo">
+                    </div>
+                    <div className="main-nav">
+                        <nav className="nav-invo">
+                            <ul>
+                                <ComponentLi listInfo="Главная" />
+                                <ComponentLi listInfo="Тест" />
+                                <ComponentLi listInfo="О нас" />
+                                <ComponentLi listInfo="Цены" />
+                            </ul>
+                        </nav>
+                    </div>
+                    <div className="header-info">
+                        <a href="tel:+" className="link-contacts">
+                            +7 700 505 3000
+                        </a>
+                        <span className="schedule">
+                            с 9:00 до 18:00
+                        </span>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const content = (
+            <div className="main-block container">
+                <h4 className="title-company-name">
+                    Команда Simple <span>Design</span>
+                </h4>
+                <h1 className="main-title">
+                    Первый интернет-сервис
+                    дизайна интерьера в Казахстане
+                </h1>
+                <ComponentInfo className="main-img-block"
+                    img="https://studio-mint.com.kg/sites/default/files/images/2024/01/20230725-94.jpg"/>
+            </div>
+        ); 
+        const info = (
+            <div className="cards-block container">
+                <div className="card">
+                    <a className="link-card">
+                        <ComponentCard
+                            imgCard='https://investplan.ru/images/329.jpg'
+                            titleCard='Тендер строительных бригад' />
+                    </a>    
+                </div>
+                <div className="card">
+                    <a className="link-card">
+                        <ComponentCard imgCard='https://static.tildacdn.com/tild3637-3739-4065-a635-623239613139/__.jpg'
+                            titleCard='Составление сметы' />
+                    </a>
+                </div>
+                <div className="card">
+                    <a className="link-card">
+                        <ComponentCard
+                            imgCard='https://papara.ru/media/thumbs/catalog/products/595/images/c8abd7b2-a042-4e51-92bb-2a437e817089.jpg.960x960_q85_crop.jpg'
+                            titleCard='Печать альбома' />
+                    </a>
+                </div>
+            </div>
+            
+        );
+
+        const footer = (
+            <div className="footer">
+                <div className="container">
+                    <p>(с) 2022. Все права защищены.</p>
+                    <div className="footer-links">
+                        <ComponentLinkFooter icon="fa-brands fa-facebook" />
+                        <ComponentLinkFooter icon="fa-brands fa-instagram" />
+                        <ComponentLinkFooter icon="fa-brands fa-twitter" />
+                        <ComponentLinkFooter icon="fa-brands fa-linkedin" />
+
+                    </div>
+                </div>    
+            </div>
+        );
 
 
-
+        const container = document.getElementById('app');
+        ReactDOM.createRoot(container).render(
+        <>
+            {header}
+            {content}
+            {info}
+            {footer}
+        </>
+        );
 
     </script>
 </body>
