@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+
+        const ComponentLi = ({listInfo}) => {
+        return (
+            <li>
+                 <a href="#">{listInfo}</a>
+            </li>
+             )
+        };
+
+        const ComponentInfo = ({myTitle, titleInfo, img}) => {
+            return (
+                <div className="main-block">
+                    <h1>{myTitle}</h1>
+                    <h3>{titleInfo}</h3>
+                    <img className="mai-img" src={img} alt="Compani Img"></img>
+                </div>
+            );
+        };
+
+        const ComponentCard = ({imgCard, cardTitle}) => {
+            return (
+                <div className="card">
+                    <img src={imgCard} alt="cardTitle"></img>
+                    <h4>{cardTitle}</h4>
+                </div>
+            );
+        };
+
+
+        const ComponentLinkFooter = ({icon}) => {
+            return(
+                <a href="#" className="footer-link">
+                    <i class={icon}></i>
+                </a>
+            )
+        };
+
+
+
+
+
+    </script>
+</body>
+
+</html>
