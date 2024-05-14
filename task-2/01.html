@@ -38,7 +38,7 @@
 
         const ComponentCard = ({imgCard, titleCard}) => {
             return (
-                <div>
+                <div className="card link-card">
                     <img className="link-img" src={imgCard} alt={titleCard}></img>
                     <h4 className="card-info">{titleCard}</h4>
                 </div>
@@ -94,26 +94,14 @@
         ); 
         const info = (
             <div className="cards-block container">
-                <div className="card">
-                    <a className="link-card">
                         <ComponentCard
                             imgCard='https://investplan.ru/images/329.jpg'
                             titleCard='Тендер строительных бригад' />
-                    </a>    
-                </div>
-                <div className="card">
-                    <a className="link-card">
                         <ComponentCard imgCard='https://static.tildacdn.com/tild3637-3739-4065-a635-623239613139/__.jpg'
                             titleCard='Составление сметы' />
-                    </a>
-                </div>
-                <div className="card">
-                    <a className="link-card">
                         <ComponentCard
                             imgCard='https://papara.ru/media/thumbs/catalog/products/595/images/c8abd7b2-a042-4e51-92bb-2a437e817089.jpg.960x960_q85_crop.jpg'
                             titleCard='Печать альбома' />
-                    </a>
-                </div>
             </div>
             
         );

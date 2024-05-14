@@ -115,20 +115,26 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
+
 .card {
-    border-radius: 20px;
     background: #FFF;
-    border-radius: 15px;
+    border-radius: 22px;
     border: 1px solid #BD7048;
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.30);
     margin-bottom: 40px;
     width: 349px;
+    animation: .5s linear 1s infinite alternate slidein;
 }
 
 .link-img {
     border-radius: 20px 20px 0px 0px;
+    display: block;
     width: 100%;
+    height: 50%;
+    object-fit: cover;
 }
 
 .card-info {
@@ -139,6 +145,8 @@ body {
     font-weight: 600;
     text-decoration-line: underline;
     padding: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
 .card-info:hover {
